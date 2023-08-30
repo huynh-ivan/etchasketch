@@ -11,7 +11,7 @@ function makeSquares() {
     const squares = document.createDocumentFragment();
     for (let i = 0; i < 17; i++) {
         const square = document.createElement('div'); //Create the square element
-        square.id = 's' + i; //Define the square element's ID as S + the counter variable
+        square.id = 's' + i; //Declare the square element's ID as S + the counter variable
         square.classList.add('square'); //add a class via class list
         squares.appendChild(square); //append the squares into the DocumentFragment
     };
