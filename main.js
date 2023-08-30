@@ -1,27 +1,24 @@
 //Add eventlistener for when the webpage loads
 const rootElement = document.documentElement;
-//site.addEventListener('load', drawSquares())
+//rootElement.addEventListener('load', makeSquares())
 
 
 //represent the container in javascript
 const container = document.querySelector('.container');
 
-//represent a square div in javascript
-const square1 = document.createElement('div');
-square1.classList.add('square');
+//write a function to make squares
+function makeSquares() {
+    const squares = document.createDocumentFragment();
+    for (let i = 0; i < 17; i++) {
+        const square = document.createElement('div'); //Create the square element
+        square.id = 's' + i; //Define the square element's ID as S + the counter variable
+        square.classList.add('square'); //add a class via class list
+        squares.appendChild(square); //append the squares into the DocumentFragment
+    };
+    container.appendChild(squares);
+};
 
-const square2 = document.createElement('div');
-square2.classList.add('square');
-
-const square3 = document.createElement('div');
-square3.classList.add('square');
-
-container.appendChild(square1);
-container.appendChild(square2);
-container.appendChild(square3);
-//write a funciton to draw 1 square
-
-
+makeSquares();
 //add eventListener for mouseenter event
 
 
