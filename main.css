@@ -1,0 +1,10 @@
+* { 
+    margin: 0px;
+}
+
+.square { 
+    height: 80px;
+    width: 80px;
+    border: 2px solid black;
+    margin: 48px;
+}
