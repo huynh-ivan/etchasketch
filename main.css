@@ -3,12 +3,16 @@
 }
 
 .container {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 800px;
     margin: 32px;
 }
 
 .grid {
-    
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .box { 

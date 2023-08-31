@@ -5,16 +5,21 @@ const rootElement = document.documentElement;
 
 
 
-const container = document.getElementById('.container') //select the container in javascript
+const container = document.querySelector('.container') //select the container in javascript
 
 const grid = document.createElement('div')//Create a grid div
 
-const column = document.createElement('div'); //Create a column div
+function makeGrid(rows, columns) {
+    for (let i = 0; i <= rows*columns; i++) {
+        const box = document.createElement('div')//Create a box div
+        box.id = i; 
+        box.classList.add('box');
+        grid.appendChild(box);
+        container.appendChild(grid);
+    };
+};
 
-const box = document.createElement('div')//Create a box div
-box.classList.add('box');
-
-
+makeGrid(16,16);
 
 
 
