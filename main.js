@@ -4,13 +4,15 @@ const rootElement = document.documentElement;
 
 
 
-//represent the container in javascript
-const container = document.querySelector('.container')
 
-const columnContainer = document.createElement('div');
-columnContainer.classList.add('column');
+const container = document.getElementById('.container') //select the container in javascript
 
+const grid = document.createElement('div')//Create a grid div
 
+const column = document.createElement('div'); //Create a column div
+
+const box = document.createElement('div')//Create a box div
+box.classList.add('box');
 
 
 
