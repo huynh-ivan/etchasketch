@@ -3,29 +3,21 @@ const rootElement = document.documentElement;
 //rootElement.addEventListener('load', makeSquares())
 
 
+
 //represent the container in javascript
-const container = document.querySelector('.container');
+const container = document.querySelector('.container')
 
-//write a function to make squares
-function makeSquares() {
-    const squares = document.createDocumentFragment();
-    for (let i = 1; i < 17; i++) {
-        const square = document.createElement('div'); //Create the square element
-        square.id = 's' + i; //Declare the square element's ID as S + the counter variable
-        square.classList.add('square'); //add a class via class list
-        squares.appendChild(square); //append the squares into the DocumentFragment
-    };
-    container.appendChild(squares);
-};
-
-makeSquares();
-//add eventListener for mouseenter event
+const columnContainer = document.createElement('div');
+columnContainer.classList.add('column');
 
 
-//add eventListener for the mouseleave event
 
 
-//add eventlistener for the mouseover event
+
+
+
+
+
 
 /*
 Questions:
@@ -45,3 +37,21 @@ Questions:
 
 
  */
+
+
+//write a function to make squares
+/*function makeColumn() {
+    const column = document.createDocumentFragment();
+    for (let i = 1; i < 17; i++) {
+        const square = document.createElement('div'); //Create the square element
+        square.id = 's' + i; //Declare the square element's ID as S + the counter variable
+        square.classList.add('square'); //add a class via class list
+        column.appendChild(square); //append the squares into the DocumentFragment
+    };
+
+    columnContainer.appendChild(column);
+    container.appendChild(columnContainer);
+};
+
+makeColumn();
+*/
