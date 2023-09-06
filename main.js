@@ -2,9 +2,6 @@
 const rootElement = document.documentElement;
 //rootElement.addEventListener('load', makeSquares())
 
-
-
-
 const container = document.querySelector('.container') //select the container in javascript
 
 const grid = document.createElement('div')//Create a grid div
@@ -18,6 +15,17 @@ function makeGrid(rows, columns) {
         box.classList.add('box');
         grid.appendChild(box);
         container.appendChild(grid);
+
+        box.addEventListener('mouseenter', enableHover)
+        box.addEventListener('mouseleave', disableHover)
+
+        function enableHover() {
+            box.classList.add('hover');            
+        };
+
+        function disableHover() {
+          box.classList.remove('hover');
+        };
     };
 };
 
