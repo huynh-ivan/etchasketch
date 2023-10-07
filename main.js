@@ -33,14 +33,6 @@ makeGrid(16,16);
 
 //Make a box
 
-let box2 = document.createElement('div')
-box2.id = 'box2';
-box2.style.backgroundColor = 'black';
-box2.style.height = '100px';
-box2.style.width = '100px';
-box2.classList.add('box');
-container.appendChild(box2);
-
 /*
 
 Calculate the size of a box based on the row + column values
