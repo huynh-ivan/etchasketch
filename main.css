@@ -2,7 +2,20 @@
     margin: 0px;
 }
 
+.grid {
+    display: grid;
+    margin: auto;
+    height: 960px;
+    width: 960px;
+}
+
+
+.gridItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .hover {
-    background-color: red;
+    background-color: aqua;
 }
