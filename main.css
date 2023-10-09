@@ -2,36 +2,20 @@
     margin: 0px;
 }
 
-.container {
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    margin: 32px
-}
-
 .grid {
-    display: flex;
-    max-width: 880px;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 16px;
+    display: grid;
+    margin: auto;
+    height: 960px;
+    width: 960px;
 }
 
-.box { 
+
+.gridItem {
     display: flex;
-    flex: auto;
     justify-content: center;
     align-items: center;
-    height: 40px;
-    width: 40px;
-    background-color: darkgray;
-    text-align: center;
-    font-size: 16px;
-    align-self: center;
 }
 
 .hover {
-    background-color: red;
-    
+    background-color: aqua;
 }
