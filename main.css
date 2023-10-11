@@ -35,3 +35,16 @@
     background-color: red;
     
 }
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin: 32px;
+}
+
+.button {
+    width: 84px;
+    height: 44px;
+    border-radius: 8px;
+    padding: 4px;
+}

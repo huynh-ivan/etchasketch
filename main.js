@@ -2,6 +2,8 @@
 const rootElement = document.documentElement;
 //rootElement.addEventListener('load', makeSquares())
 
+const button = document.querySelector('.newgrid')
+
 const container = document.querySelector('.container') //select the container in javascript
 
 const grid = document.createElement('div')//Create a grid div
