@@ -1,11 +1,8 @@
 
-const button = document.querySelector('.newgrid')
+const defaultSize = 16;
 
-const container = document.querySelector('.container') //select the container in javascript
-//select the container div in javascript
 const grid = document.querySelector('.grid')
 grid.classList.add('grid')
-
 
 function makeGrid(size) {
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
@@ -30,8 +27,19 @@ function makeGrid(size) {
 
 
 
+const btnResetGrid = document.getElementById('resetGrid'); //Select the button
 
-makeGrid(23);
+btnResetGrid.addEventListener('click', newGrid());
+/*btnResetGrid.addEventListener('click', function(e) { 
+  console.log(e);
+  });*/
+
+function newGrid() {
+  let newSize = prompt('Input a new size for the grid', 'Enter a value less than 100');
+  let size = newSize;
+  makeGrid(size)
+};
+
 
 
 
