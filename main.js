@@ -25,22 +25,14 @@ function makeGrid(size) {
     };
 };
 
+document.addEventListener('load', makeGrid(defaultSize)); //initialize the first grid
 
+//select the Reset Grid Button using JS
 
-const btnResetGrid = document.getElementById('resetGrid'); //Select the button
+//when the user clicks the Reset Grid button, prompt the user for a new grid value
 
-btnResetGrid.addEventListener('click', newGrid());
-/*btnResetGrid.addEventListener('click', function(e) { 
-  console.log(e);
-  });*/
+//Use the return of the prompt as the new size for the grid
 
-function newGrid() {
-  let newSize = prompt('Input a new size for the grid', 'Enter a value less than 100');
-  let size = newSize;
-  makeGrid(size)
-};
+//generate the new grid
 
-
-
-
-
+//swap the initial grid with the new grid?
