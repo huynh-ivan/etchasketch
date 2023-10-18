@@ -1,10 +1,10 @@
 
-const defaultSize = 16;
-
-const grid = document.querySelector('.grid')
-grid.classList.add('grid')
+const defaultSize = 0;
 
 function makeGrid(size) {
+  const grid = document.querySelector('.grid')
+  
+  grid.classList.add('grid')
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     
@@ -29,21 +29,11 @@ function makeGrid(size) {
 const btnResetGrid = document.getElementById('resetGrid');
 btnResetGrid.addEventListener('click', resetGrid);
 
-function resetGrid() {
+function resetGrid() { 
   let newSize = prompt("Enter a number", "0-100");
   let size = newSize;
   makeGrid(size);
 };
 
 
-makeGrid(defaultSize); //initialize the first grid
-
-//select the Reset Grid Button using JS
-
-//when the user clicks the Reset Grid button, prompt the user for a new grid value
-
-//Use the return of the prompt as the new size for the grid
-
-//generate the new grid
-
-//swap the initial grid with the new grid?
+makeGrid(defaultSize);
