@@ -10,6 +10,7 @@ function makeGrid(size) {
     
   for (let i = 0; i < size * size; i++) {
     const gridItem = document.createElement('div');
+    
     gridItem.id = i;
     gridItem.textContent = i;
     gridItem.classList.add('gridItem');
@@ -21,11 +22,21 @@ function makeGrid(size) {
       gridItem.classList.toggle('hover');
     };
 
-    grid.appendChild(gridItem);
-    };
+    grid.appendChild(gridItem);  
+  };
 };
 
-document.addEventListener('load', makeGrid(defaultSize)); //initialize the first grid
+const btnResetGrid = document.getElementById('resetGrid');
+btnResetGrid.addEventListener('click', resetGrid);
+
+function resetGrid() {
+  let newSize = prompt("Enter a number", "0-100");
+  let size = newSize;
+  makeGrid(size);
+};
+
+
+makeGrid(defaultSize); //initialize the first grid
 
 //select the Reset Grid Button using JS
 
