@@ -4,8 +4,8 @@ const defaultSize = 0;
 const gridContainer = document.querySelector('.gridContainer');
 
 const grid = document.createElement('div');
-grid.classList.add('grid')
-grid.id =('current')
+grid.classList.add('grid');
+grid.id = 'current';
 
 function makeGrid(size) {
   
