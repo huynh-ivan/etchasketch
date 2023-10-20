@@ -2,11 +2,26 @@
     margin: 0px;
 }
 
+.gridContainer {
+    display: flex;
+    margin: 24px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    padding: 16px;
+}
+
 .grid {
+    border: 1px black solid;
     display: grid;
     margin: auto;
-    height: 960px;
-    width: 960px;
+    height: 100%;
+    width: 100%;
+    min-width: 960px;
+    min-height: 960px;
 }
 
 

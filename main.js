@@ -1,10 +1,14 @@
 
 const defaultSize = 0;
 
+const gridContainer = document.querySelector('.gridContainer');
+
+const grid = document.createElement('div');
+grid.classList.add('grid')
+grid.id =('current')
+
 function makeGrid(size) {
-  const grid = document.querySelector('.grid')
   
-  grid.classList.add('grid')
   grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
   grid.style.gridTemplateRows = `repeat(${size}, 1fr)`;
     
@@ -23,17 +27,32 @@ function makeGrid(size) {
     };
 
     grid.appendChild(gridItem);  
+    gridContainer.appendChild(grid);
   };
 };
 
-const btnResetGrid = document.getElementById('resetGrid');
-btnResetGrid.addEventListener('click', resetGrid);
+
+function deleteGrid() {
+  let grid = document.getElementById('current')
+
+  while (grid.hasChildNodes()) {
+    grid.removeChild(grid.firstChild)
+  };
+};
+
 
 function resetGrid() { 
+  //deleteGrid()
   let newSize = prompt("Enter a number", "0-100");
   let size = newSize;
   makeGrid(size);
 };
 
 
-makeGrid(defaultSize);
+const btnDeleteGrid = document.getElementById('deleteGrid');
+btnDeleteGrid.addEventListener('click', deleteGrid);
+
+const btnResetGrid = document.getElementById('resetGrid');
+btnResetGrid.addEventListener('click', resetGrid);
+
+
