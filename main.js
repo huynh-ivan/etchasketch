@@ -42,9 +42,9 @@ function deleteGrid() {
 
 
 function resetGrid() { 
-  //deleteGrid()
   let newSize = prompt("Enter a number", "0-100");
   let size = newSize;
+  deleteGrid()
   makeGrid(size);
 };
 
@@ -56,3 +56,4 @@ const btnResetGrid = document.getElementById('resetGrid');
 btnResetGrid.addEventListener('click', resetGrid);
 
 
+makeGrid(16);
