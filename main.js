@@ -1,5 +1,5 @@
 
-const defaultSize = 0;
+const defaultSize = 16;
 
 const gridContainer = document.querySelector('.gridContainer');
 
@@ -56,4 +56,5 @@ const btnResetGrid = document.getElementById('resetGrid');
 btnResetGrid.addEventListener('click', resetGrid);
 
 
-makeGrid(16);
+document.addEventListener('load', makeGrid(defaultSize));
+//makeGrid(16);
