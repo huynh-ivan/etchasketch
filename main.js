@@ -56,5 +56,4 @@ const btnResetGrid = document.getElementById('resetGrid');
 btnResetGrid.addEventListener('click', resetGrid);
 
 
-document.addEventListener('load', makeGrid(defaultSize));
-//makeGrid(16);
+document.addEvengtListener('load', makeGrid(defaultSize));
